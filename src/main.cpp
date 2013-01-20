@@ -28,6 +28,8 @@ int main (int argc, char** argv)
 
     Run ball_killer(speed);
 
+	SDL_WM_SetCaption("Ball Kiler", NULL);
+	
     SDL_Surface* screen = SDL_SetVideoMode(WITDH, HEIGHT, 16, SDL_HWSURFACE|SDL_DOUBLEBUF);
 
     ball_killer.add_screen(screen);
