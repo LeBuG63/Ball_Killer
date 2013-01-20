@@ -57,7 +57,7 @@ void Ennemy::move(double speed_add)
     int time = SDL_GetTicks();
     static int xBall = rand_v(), yBall = rand_v();
 
-    static double new_speed = 1;
+    static double new_speed = 1.;
 
     if((time - old_time) > 0)
     {
@@ -89,8 +89,8 @@ void Ennemy::move(double speed_add)
             std::cout << "[Collision - Speed: " << new_speed << "] Down\n";
         }
 
-        if(new_speed >= 100)
-            new_speed = 100;
+        if(new_speed >= 20)
+            new_speed = 20;
 
         m_boxEnnemy->pos.x += xBall;
         m_boxEnnemy->pos.y += yBall;

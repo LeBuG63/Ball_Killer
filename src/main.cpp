@@ -19,18 +19,16 @@ int main (int argc, char** argv)
     freopen("CON", "w", stdout);
     freopen("CON", "r", stdin);
     freopen("CON", "w", stderr);
+
     putenv("SDL_VIDEO_WINDOW_POS=center");
 
-    char c;
-    bool retry = false;
     double speed = 1;
     speed = SetSpeed();
 
     Run ball_killer(speed);
 
-	SDL_WM_SetCaption("Ball Kiler", NULL);
-	
     SDL_Surface* screen = SDL_SetVideoMode(WITDH, HEIGHT, 16, SDL_HWSURFACE|SDL_DOUBLEBUF);
+        SDL_WM_SetCaption("Ball Kiler", NULL);
 
     ball_killer.add_screen(screen);
 
